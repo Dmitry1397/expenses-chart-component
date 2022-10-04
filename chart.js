@@ -24,7 +24,7 @@ function update(data) {
     let max = Math.max(...array);
     let maxId = array.indexOf(max);
 
-    blocks[maxId].id = 'higher';
+    blocks[maxId].classList = 'data higher';
 }
 
 if (innerWidth < 500) {

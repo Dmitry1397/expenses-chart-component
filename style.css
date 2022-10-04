@@ -89,7 +89,7 @@ body {
     border-radius: 5px 5px 0 0;
 }
 
-#higher {
+.data.higher {
     background: hsl(186, 34%, 60%);
 }
 
