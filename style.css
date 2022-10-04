@@ -136,3 +136,9 @@ body {
     font-weight: 700;
     font-size: 18px;
 }
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 95%;
+    }
+}

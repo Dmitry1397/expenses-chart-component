@@ -1,30 +1,30 @@
-var spendings;
+const labels = document.querySelectorAll('.chart span');
+const blocks = document.querySelectorAll('.data');
+let array = [];
 
 fetch('./data.json')
     .then((response) => response.json())
-    .then((json) => spendings = json);
+    .then((json) => update(json));
 
-console.log(spendings);
+function update(data) {
+    labels.forEach((element, index) => {
+        element.textContent = `$${data[index].amount}`;
+    })
 
-const labels = document.querySelectorAll('.chart span');
-const blocks = document.querySelectorAll('.data');
+    blocks.forEach((element, index) => {
+        element.style.height = `${parseInt(data[index].amount)*1.5}px`;
+    })
 
-labels.forEach((element, index) => {
-    //element.textContent = data;
-})
+    data.forEach(element => {
+        array.push(element.amount);
+    })
 
-blocks.forEach((element, index) => {
-    //element.style.height = `${parseInt(data)*1.5}px`;
-})
+    let max = Math.max(...array);
+    let maxId = array.indexOf(max);
 
-let array = [];
+    blocks[maxId].id = 'higher';
+}
 
-/*data.forEach(element => {
-    array.push(element.amount);
-})
-*/
-let max = Math.max(...array);
-let maxId = array.indexOf(max);
 
-//blocks[maxId].id = 'higher';
+
 
