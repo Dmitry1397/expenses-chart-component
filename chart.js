@@ -1,5 +1,7 @@
 const labels = document.querySelectorAll('.chart span');
 const blocks = document.querySelectorAll('.data');
+const x = window.innerWidth;
+
 let array = [];
 
 fetch('./data.json')
@@ -25,6 +27,23 @@ function update(data) {
     blocks[maxId].id = 'higher';
 }
 
+if (innerWidth < 500) {
+    blocks.forEach(element => {
+        element.addEventListener('click', () => {
+            if (element.id === 'hidden') {
+                element.style.opacity = 0.5;
+                element.previousElementSibling.style.visibility = 'visible';
+                element.id = 'visible';
+            } else {
+                element.style.opacity = 1;
+                element.previousElementSibling.style.visibility = 'hidden';
+                element.id = 'hidden';
+            }
+            
+        })
+    })
+    console.log(x);
+}
 
 
 
