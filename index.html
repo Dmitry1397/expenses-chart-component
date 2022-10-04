@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="chart.js" defer></script>
+
+  <title>Expenses chart component</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="my-balance">
+      <p id="balance"><span>My balance</span>$921.48</p>
+    </div>
+    <div class="spendings">
+      <p id="heading">Spending - Last 7 days</p>
+      <div class="chart">
+        <div class="column" id="mon">
+          <span>$10.10</span>
+          <div class="data"></div>
+          <p class="day">mon</p>
+        </div>
+        <div class="column" id="tue">
+          <span>$20.20</span>
+          <div class="data"></div>
+          <p class="day">tue</p>
+        </div>
+        <div class="column" id="wed">
+          <span>$30.30</span>
+          <div class="data"></div>
+          <p class="day">wed</p>
+        </div>
+        <div class="column" id="thu">
+          <span>$40.40</span>
+          <div class="data"></div>
+          <p class="day">thu</p>
+        </div>
+        <div class="column" id="fri">
+          <span>$50.50</span>
+          <div class="data"></div>
+          <p class="day">fri</p>
+        </div>
+        <div class="column" id="sat">
+          <span>$60.60</span>
+          <div class="data"></div>
+          <p class="day">sat</p>
+        </div>
+        <div class="column" id="sun">
+          <span>$707070.70</span>
+          <div class="data"></div>
+          <p class="day">sun</p>
+        </div>
+      </div>
+      <div class="total">
+        <p id="total"><span>Total this month</span>$478.33</p>
+        <p id="percent">+2.4%<span>from last month</span></p>
+      </div>
+    </div>
+  </div>
+
+  
+
+  mon
+  tue
+  wed
+  thu
+  fri
+  sat
+  sun
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+html {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: hsl(27, 66%, 92%);
+}
+
+.wrapper {
+    width: 400px;
+}
+
+.my-balance {
+    padding: 20px;
+    background: hsl(10, 79%, 65%) url(images/logo.svg) no-repeat right 20px center / 50px;
+    border-radius: 15px;
+}
+
+#balance {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+#balance span {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.spendings {
+    margin-top: 20px;
+    padding: 20px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 15px;
+}
+
+#heading {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+
+.chart {
+    height: 130px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid hsl(28, 10%, 53%);
+}
+
+.column {
+    width: 40px;
+    position: relative;
+}
+
+.column span {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+    display: block;
+    visibility: hidden;
+    width: fit-content;
+    min-width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 10px;
+    text-align: center;
+    background: hsl(25, 47%, 15%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+}
+
+.data {
+    height: 50px;
+    background: hsl(10, 79%, 65%);
+    border-radius: 5px 5px 0 0;
+}
+
+#higher {
+    background: hsl(186, 34%, 60%);
+}
+
+.column:hover span {
+    visibility: visible;
+}
+
+.column:hover .data {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.day {
+    margin: 0;
+    text-align: center;
+    color: hsl(28, 10%, 53%);
+}
+
+.total {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: hsl(25, 47%, 15%);
+}
+
+.total p {
+    margin: 0;
+}
+
+.total span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#total {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#percent {
+    text-align: right;
+    font-weight: 700;
+    font-size: 18px;
+}
